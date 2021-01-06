@@ -9,6 +9,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: lightsalmon;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
 }
 
 #board {
@@ -17,12 +20,12 @@ body {
     grid-template-columns: repeat(8, 1fr);
     
     width: 80%;
-    background-color: lightpink;
 }
 
 .square {
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 .square.white {
@@ -33,8 +36,45 @@ body {
     background-color: black;
 }
 
+.square .letter {
+    position: relative;
+    color: white;
+    top: 105%;
+}
+
+.square .number {
+    position: relative;
+    color: white;
+    top: 43%;
+    right: 66%;
+}
+
+.square .number.one{
+    right: 72%;
+}
+
 @media screen and (min-width: 1080px) {
     #board {
         width: 864px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .square .number {
+        right: 70%;
+    }
+    
+    .square .number.one{
+        right: 77%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .square .number {
+        right: 80%;
+    }
+    
+    .square .number.one{
+        right: 90%;
     }
 }
