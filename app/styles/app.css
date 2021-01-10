@@ -28,6 +28,7 @@ body {
     width: 100%;
     height: 100%;
     color: white;
+    display: flex;
 }
 
 .square.white {
@@ -48,6 +49,61 @@ body {
     transform: translate(-19px, 37px);
 }
 
+.piece {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    align-self: center;
+    background-size: cover;
+}
+
+.white-pawn {
+    background-image: url(../assets/pieces/whites/pawn.svg);
+}
+
+.white-rook {
+    background-image: url(../assets/pieces/whites/rook.svg);
+}
+
+.white-knight {
+    background-image: url(../assets/pieces/whites/knight.svg);
+}
+
+.white-bishop {
+    background-image: url(../assets/pieces/whites/bishop.svg);
+}
+
+.white-queen {
+    background-image: url(../assets/pieces/whites/queen.svg);
+}
+
+.white-king {
+    background-image: url(../assets/pieces/whites/king.svg);
+}
+
+.black-pawn {
+    background-image: url(../assets/pieces/blacks/pawn.svg);
+}
+
+.black-rook {
+    background-image: url(../assets/pieces/blacks/rook.svg);
+}
+
+.black-knight {
+    background-image: url(../assets/pieces/blacks/knight.svg);
+}
+
+.black-bishop {
+    background-image: url(../assets/pieces/blacks/bishop.svg);
+}
+
+.black-queen {
+    background-image: url(../assets/pieces/blacks/queen.svg);
+}
+
+.black-king {
+    background-image: url(../assets/pieces/blacks/king.svg);
+}
 
 @media screen and (max-width: 1366px) {
     #board {
