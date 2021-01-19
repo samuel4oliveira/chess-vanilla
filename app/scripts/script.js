@@ -48,6 +48,24 @@ function cleanNextMove() {
     addLogic();
 }
 
+function promotion(piece) {
+    const isWhitePawn = piece.classList.contains('white-pawn');
+    const inRow8 = piece.parentElement.id.includes('8');
+    if (isWhitePawn && inRow8) {
+        piece.classList.remove('white-pawn');
+        piece.classList.add('white-queen');
+        return;
+    }
+
+    const isBlackPawn = piece.classList.contains('black-pawn');
+    const inRow1 = piece.parentElement.id.includes('1');
+    if (isBlackPawn && inRow1) {
+        piece.classList.remove('black-pawn');
+        piece.classList.add('black-queen');
+        return;
+    }
+}
+
 function logic() {
     const square = this;
     let isPiece = false;
@@ -65,10 +83,10 @@ function logic() {
     } else if (moviment.piece) {
         moviment.square = square;
         moviment.square.append(moviment.piece);
-
     } else {
         return
     }
 
+    promotion(capture.piece1);
     cleanNextMove();
 }
