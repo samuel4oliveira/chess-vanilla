@@ -1,7 +1,7 @@
 const pieces = document.querySelectorAll('.piece');
 const squares = document.querySelectorAll('.square');
 
-const moviment = {
+const movement = {
     piece: null,
     square: null
 };
@@ -28,7 +28,7 @@ function addLogic() {
 function saveNextMove() {
     for (const piece of pieces) {
         piece.addEventListener('click', () => {
-            moviment.piece = piece;
+            movement.piece = piece;
             if (capture.piece1 === null) {
                 capture.piece1 = piece;
             } else if (piece !== capture.piece1) {
@@ -39,8 +39,8 @@ function saveNextMove() {
 }
 
 function cleanNextMove() {
-    moviment.piece = null;
-    moviment.square = null;
+    movement.piece = null;
+    movement.square = null;
 
     capture.piece1 = null;
     capture.piece2 = null;
@@ -80,9 +80,9 @@ function logic() {
         } else {
             return
         }
-    } else if (moviment.piece) {
-        moviment.square = square;
-        moviment.square.append(moviment.piece);
+    } else if (movement.piece) {
+        movement.square = square;
+        movement.square.append(movement.piece);
     } else {
         return
     }
